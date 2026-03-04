@@ -1,0 +1,16 @@
+{
+    "id": "archPackageManager",
+    "name": "Arch Package Manager",
+    "description": "Monitor and install Arch Linux package updates from official repos and AUR",
+    "version": "1.0.0",
+    "author": "ebbo",
+    "component": "./PackageManagerWidget.qml",
+    "icon": "system_update",
+    "settings": "./PackageManagerSettings.qml",
+    "requires_dms": ">=1.4.0",
+    "license": "MIT",
+    "permissions": [
+        "settings_read",
+        "settings_write"
+    ]
+}
