@@ -39,6 +39,11 @@ Column {
         }
         anchors.horizontalCenter: parent.horizontalCenter
         rotation: 0
+        transform: Scale {
+            origin.x: stateIcon.width / 2
+            origin.y: stateIcon.height / 2
+            xScale: root.isChecking ? -1 : 1
+        }
     }
 
     Timer {
@@ -46,7 +51,7 @@ Column {
         interval: 16
         repeat: true
         running: root.isChecking
-        onTriggered: stateIcon.rotation = (stateIcon.rotation + 4) % 360
+        onTriggered: stateIcon.rotation = (stateIcon.rotation - 4 + 360) % 360
     }
 
     StyledText {
